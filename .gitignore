@@ -1,0 +1,51 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Haskell
+dist/
+dist-newstyle/
+.stack-work/
+*.hi
+*.o
+.ghc.environment.*
+
+# OCaml
+_build/
+_opam/
+*.install
+
+# F# / .NET
+bin/
+obj/
+
+# Scala
+target/
+.bsp/
+.metals/
+.bloop/
+
+# Clojure
+.cpcache/
+.lein-*
+.nrepl-port
+
+# Elixir
+deps/
+erl_crash.dump
+*.ez
+
+# Racket / Scheme
+compiled/
+
+# JavaScript / TypeScript / Elm
+node_modules/
+elm-stuff/
+
+# Env
+.env
