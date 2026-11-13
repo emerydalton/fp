@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fp — learning functional programming</title>
+<meta name="description" content="Notes, exercises, and resources from learning functional programming.">
+<style>
+  :root {
+    --bg: #fbfaf7; --fg: #1d1c1a; --muted: #6b675f; --line: #e4e0d6;
+    --accent: #7a3e9d; --code-bg: #f1eee6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17161a; --fg: #ebe8e1; --muted: #9a958a; --line: #2e2c33;
+      --accent: #c79bea; --code-bg: #211f26;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.6 Charter, "Iowan Old Style", Georgia, serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 4rem 1.25rem 5rem; }
+  code, .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  header .lambda { font-size: 3rem; line-height: 1; color: var(--accent); }
+  h1 { font-size: 2.4rem; line-height: 1.15; margin: .5rem 0 .25rem; letter-spacing: -.01em; }
+  .tagline { color: var(--muted); font-size: 1.15rem; margin: 0 0 1.5rem; }
+  .sig {
+    display: inline-block; background: var(--code-bg); border: 1px solid var(--line);
+    border-radius: 6px; padding: .5rem .8rem; font-size: .9rem; overflow-x: auto; max-width: 100%;
+  }
+  nav { margin: 1.75rem 0 0; display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; font-size: .95rem; }
+  h2 {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; color: var(--muted);
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-weight: 600;
+    margin: 3.5rem 0 1rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+  }
+  ol.roadmap { padding-left: 1.5rem; margin: 0; columns: 2; column-gap: 2.5rem; }
+  ol.roadmap li { break-inside: avoid; padding: .15rem 0; }
+  ol.roadmap li::marker { color: var(--muted); font-size: .85em; }
+  @media (max-width: 34rem) { ol.roadmap { columns: 1; } h1 { font-size: 2rem; } }
+  ul.links { list-style: none; padding: 0; margin: 0; }
+  ul.links li { padding: .55rem 0; border-bottom: 1px solid var(--line); }
+  ul.links li:last-child { border-bottom: 0; }
+  ul.links span { color: var(--muted); display: block; font-size: .92rem; }
+  footer { margin-top: 4rem; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="lambda mono" aria-hidden="true">λ</div>
+    <h1>fp</h1>
+    <p class="tagline">Learning functional programming: notes, exercises, and small projects.</p>
+    <code class="sig">learn :: Curiosity -&gt; [Exercise] -&gt; Understanding</code>
+    <nav>
+      <a href="https://github.com/emerydalton/fp">Repository</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
+
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+    <ol class="roadmap">
+      <li>Pure functions</li>
+      <li>Immutability</li>
+      <li>Higher-order functions</li>
+      <li>Recursion and tail calls</li>
+      <li>Closures and currying</li>
+      <li>Composition</li>
+      <li>Algebraic data types</li>
+      <li>Pattern matching</li>
+      <li>Polymorphism and inference</li>
+      <li>Type classes</li>
+      <li>Laziness and streams</li>
+      <li>Functor, Applicative, Monad</li>
+      <li>Managing effects</li>
+      <li>Property-based testing</li>
+      <li>Functional architecture</li>
+    </ol>
+  </section>
+
+  <section id="resources">
+    <h2>Start here</h2>
+    <ul class="links">
+      <li><a href="https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf">Why Functional Programming Matters</a>
+        <span>John Hughes. The short paper that explains the point of it all.</span></li>
+      <li><a href="https://sarabander.github.io/sicp/">Structure and Interpretation of Computer Programs</a>
+        <span>Abelson &amp; Sussman. The classic foundation, in Scheme.</span></li>
+      <li><a href="https://htdp.org/">How to Design Programs</a>
+        <span>Felleisen et al. Systematic program design, in Racket.</span></li>
+      <li><a href="https://cs3110.github.io/textbook/">OCaml Programming: Correct + Efficient + Beautiful</a>
+        <span>Cornell CS 3110. A modern free textbook with videos.</span></li>
+      <li><a href="https://haskell.mooc.fi/">Haskell MOOC</a>
+        <span>University of Helsinki. Free course with auto-graded exercises.</span></li>
+      <li><a href="https://learnyouahaskell.github.io/">Learn You a Haskell</a>
+        <span>The friendly illustrated introduction, community edition.</span></li>
+      <li><a href="https://fsharpforfunandprofit.com/">F# for Fun and Profit</a>
+        <span>Scott Wlaschin. Explanations that carry over to any language.</span></li>
+      <li><a href="https://github.com/MostlyAdequate/mostly-adequate-guide">Mostly Adequate Guide to Functional Programming</a>
+        <span>Professor Frisby. FP in JavaScript.</span></li>
+      <li><a href="https://exercism.org/tracks">Exercism</a>
+        <span>Free practice tracks for Haskell, OCaml, Elixir, Clojure, F#, and more.</span></li>
+    </ul>
+  </section>
+
+  <footer>
+    <a href="https://github.com/emerydalton/fp">emerydalton/fp</a> · MIT License
+  </footer>
+</main>
+</body>
+</html>
